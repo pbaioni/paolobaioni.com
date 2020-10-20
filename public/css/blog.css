@@ -1,0 +1,241 @@
+/*! TAKEN FROM project oblog of oclock
+TODO : A PERSONNALISER
+
+Device      = idBootstrap   => MinWidth
+Mobile      = sm            => 576px
+Tablet      = md            => 768px
+PC          = lg            => 992px
+Large PC    = xl            => 1200px
+
+TODO : charte graphique
+color1 = #86D37C
+*/
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header .header-bg {
+    background: url('../images/plant_3.jpeg') transparent left no-repeat; 
+    background-size: cover;
+    margin-bottom: 1em;
+}
+
+header {
+    color: #333;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+/* Background color on navbar for mobile screens */
+.navbar {
+    background-color: #f8f8f8;
+}
+
+.navbar,
+.navbar-light .navbar-brand,
+.navbar-light .navbar-toggler {
+    color: #333;
+    font-weight: 800;
+}
+
+header hr {
+    border-width: 3px;
+    border-color: #333;
+    width: 60px;
+}
+
+.navbar-light .navbar-brand {
+    font-size: 18px;
+}
+
+.navbar-toggler,
+.nav-link {
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: 400ms;
+}
+
+header section {
+    padding: 1em 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+header p {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+article.card {
+    margin: 2em 0;
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+article h2, 
+section h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+article p.card-text,
+section p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+article div {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+}
+
+article a,
+article time {
+    color: black;
+}
+
+article .infos {
+    font-style: italic;
+    color: grey;
+}
+
+.page-link {
+    text-transform: uppercase;
+    color: inherit;
+    font-size: 0.8em;
+}
+
+.page-link:hover {
+    background-color: #dee2e6;
+    color: inherit;
+}
+
+aside {
+    display: none;
+    padding: 2em 0;
+}
+
+.btn-primary {
+    background-color: #86D37C;
+    border: 1px solid #86D37C;
+    font-size: 1.4em;
+    font-weight: 600;
+    padding: 0.4em 1.2em;
+    margin: 1.2em;
+}
+
+footer {
+    margin-bottom: 1em;
+    margin-top:2em;
+    color: #888;
+    font-size:0.9em;
+}
+
+footer .social-networks {
+    margin: 10px 0;
+}
+
+footer .social-networks a {
+    font-size: 40px;
+    color: #888;
+}
+
+footer .links a {
+    color: inherit;
+}
+
+footer .social-networks a:hover,
+footer .links a:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+
+
+/* DEVICE TABLET => md in bootstrap */
+@media (min-width:768px) {
+
+header {
+    padding-bottom: 0;
+    /* Title and catchphrase are masked so padding bottom not necessary */
+}
+
+.navbar .header-bg {
+    background-color: transparent;
+}
+
+.navbar {
+    background-color: #f8f8f8;
+}
+
+.navbar,
+.navbar-light .navbar-brand,
+.navbar-light .navbar-toggler,
+.navbar-light .navbar-nav .nav-link {
+    color: #333;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #86D37C;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.today {
+    color : #86D37C;
+}
+
+.today {
+    font-weight:bold;
+}
+
+header section {
+    display: none;
+}
+}
+
+/* DEVICE PC => lg in bootstrap */
+@media (min-width:992px) {
+header section {
+    display: block;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header p {
+    width: 60%;
+    margin: auto;
+    padding-bottom: 1em;
+}
+
+/* sidebar */
+.card-header {
+    background: #86D37C;
+    color: white;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+.card a {
+    color: #333;
+}
+
+.card-categories a {
+    text-transform: uppercase;
+}
+
+.card {
+    margin: 2em 0;
+}
+
+aside {
+    display: block;
+}
+}

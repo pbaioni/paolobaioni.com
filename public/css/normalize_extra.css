@@ -1,0 +1,383 @@
+/*! TAKEN FROM https://github.com/davidhartsough/you-dont-need-bootstrap
+*/
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+body {
+    /* Personal preferences */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Helvetica Neue", Arial, sans-serif;
+    background-color: #fafafa;
+    /* Basics from normalize.css */
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    /*
+      Normalize.css sets line-height to 1.15 as a standard,
+      but I prefer 1.5 as the base for all text,
+      because it's a bit more readable and spacious.
+    */
+    line-height: 1.15;
+  }
+
+section {
+    /* This value is a personal preference. */
+    padding: 1rem;
+  }
+  /* This is an arbitrary breakpoint. Choose your own value. */
+  @media screen and (min-width: 480px) {
+    section {
+      padding: 2rem;
+    }
+  }
+
+/* Basic text */
+/* These values are a personal preference. */
+h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0 0 0.5rem 0;
+    /* Personally, I prefer lightweight headings. */
+    font-weight: 300;
+  }
+  p {
+    margin: 0 0 0.5rem 0;
+    font-weight: 400;
+  }
+  /* Links */
+  a {
+    text-decoration: none;
+    /* This color is a personal preference. */
+    color: #146eeb;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  /* Lists */
+  ul,
+  ol {
+    margin: 0.5rem 0 1rem;
+    padding-inline-start: 2rem;
+  }
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin: 0;
+  }
+
+  .list {
+    /* Choose your favorite color. */
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    margin: 0.75rem 0;
+    overflow: hidden;
+  }
+  .list-item {
+    /* Choose how big you want each row to be. */
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+  }
+  .list-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Buttons */
+/* Base */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.15;
+  letter-spacing: 0.025rem;
+  border: none;
+  border-radius: 0.25rem;
+  border: 1px solid #aaa;
+  background-color: transparent;
+  color: #444;
+  outline: none;
+  text-decoration: none;
+  user-select: none;
+  width: auto;
+  height: auto;
+  margin: 0 0.5rem 0.75rem 0;
+}
+/* Hover and focus */
+button:hover,
+.button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:focus,
+.button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  text-decoration: none;
+  border-color: #555;
+  color: #000;
+}
+/* Extras */
+.primary {
+  color: #fff;
+  border-color: #146eeb;
+  background-color: #146eeb;
+}
+.primary:hover,
+.primary:focus {
+  color: #fff;
+  border-color: #125ece;
+  background-color: #125ece;
+}
+.secondary {
+  border-color: #ebebeb;
+  background-color: #ebebeb;
+}
+.secondary:hover,
+.secondary:focus {
+  border-color: #e0e0e0;
+  background-color: #e0e0e0;
+}
+.round {
+  border-radius: 1.25rem;
+  padding: 0.5rem 1rem;
+}
+/* w/ an icon */
+.icon-button {
+  padding: 0.5rem 1rem 0.5rem 0.75rem;
+  display: flex;
+}
+.icon-button .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.25rem;
+}
+
+/* Form
+/* This CSS assumes that you put your inputs inside your labels, like so:
+<label>
+  Label for input
+  <input type="text" />
+</label>
+*/
+
+label {
+  display: block;
+  /* This value is a personal preference for spacing. */
+  margin: 0.75rem 0;
+}
+input:not([type="checkbox"]),
+textarea,
+select {
+  display: block;
+  /* Change the height and size (padding) to match your aesthetic. */
+  height: 2rem;
+  padding: 0.25rem 0.5rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  outline: none;
+  width: 100%;
+  margin: 0.25rem 0;
+}
+/* Also consider a hover state. It's less common but still cool. */
+input:focus,
+textarea:focus,
+select:focus {
+  /* This is my personal choice of blue as a base theme color. */
+  border-color: #146eeb;
+}
+textarea {
+  /* I prefer to not let people resize textareas. I never use that feature. */
+  resize: none;
+  height: auto;
+  line-height: 1.15;
+}
+/* Checkboxes */
+.checkbox-label {
+  display: flex;
+  /* Get the box vertically aligned with the label. */
+  align-items: center;
+}
+input[type="checkbox"] {
+  /* Add space between the box and the label */
+  margin-right: 0.5rem;
+}
+
+/* Search */
+/* this assumes you build your search like so : 
+<label class="search">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="search-icon"
+  >
+    <circle cx="11" cy="11" r="8" />
+    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+  </svg>
+  <input type="search" placeholder="Search" />
+</label>
+*/
+/* This demonstration really just shows how to put an icon prefix or postfix in an input. 
+I usually use the stereotypical magnifying glass icon (from Feather icons) as a search input prefix. 
+To get the icon positioned correctly, I absolutely position the icon inside the relatively positioned label. 
+And since everything is inside the label, you can click right on the icon and it will still focus the input element.
+*/
+.search {
+  position: relative;
+}
+.search-icon {
+  position: absolute;
+  top: 0;
+  left: 0.125rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.375rem;
+  margin: 0;
+  line-height: 1;
+  margin: 0;
+  color: #777;
+}
+.search input[type="search"] {
+  padding-left: 2rem;
+}
+
+/* Google Material Design - Cards */
+/* Here's the basic HTML. This assumes you've already included the button styles shown above.
+<div class="card">
+  <img class="card-media" src="https://via.placeholder.com/320x180" />
+  <div class="card-content">
+    <h5 class="card-title">Card title</h5>
+    <p>
+      Card text. Basic example of some text content inside a card. Wow, look at
+      this great text.
+    </p>
+    <button class="card-action primary">Card action</button>
+  </div>
+</div> 
+*/
+
+.card {
+  /* This flex basis and max-width of 18rem is arbitrary. */
+  flex: 1 0 18rem;
+  max-width: 18rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  /* This margin spacing is also arbitrary. */
+  margin: 1rem 1rem 0 0;
+}
+.card-content {
+  padding: 1rem;
+}
+.card-media {
+  width: 100%;
+}
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+.card-link {
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.125rem 0;
+  margin: 0 1rem 0 0;
+  letter-spacing: 0.025rem;
+  display: inline-block;
+}
+.card-link:hover,
+.card-link:focus {
+  text-decoration: none;
+  /* Darker blue */
+  color: #125ece;
+}
+.card-action {
+  margin: 0.25rem 1rem 0 0;
+}
+
+/* Loaders/spinners AKA Loading indicators 
+<div class="loader"></div>
+<div class="spinner"></div>
+*/
+.loader,
+.spinner {
+  /* Space to taste. */
+  margin: 1rem;
+  /* Resize to taste. */
+  width: 4rem;
+  height: 4rem;
+  /* Color to taste. */
+  border: 0.25rem solid #146eeb;
+  border-top: 0.25rem solid #eee;
+  border-radius: 50%;
+  /* Speed the duration to taste. */
+  animation: spin 1s linear infinite;
+}
+.loader {
+  /* Swap colors: 3/4ths light grey and 1/4th blue */
+  border: 0.25rem solid #eee;
+  border-top: 0.25rem solid #146eeb;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Flexbox */
+.flex-container {
+  display: flex;
+  flex-flow: row nowrap;
+  /*
+  flex-flow is the combination of flex-direction and flex-wrap.
+    flex-direction: row;
+    flex-wrap: nowrap;
+  */
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
+.flex-item {
+  flex: 0 1 auto;
+}

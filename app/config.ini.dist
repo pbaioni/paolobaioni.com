@@ -1,0 +1,9 @@
+; Fichier de configuration d'exemple
+; Pour faire fonctionner la BDD, 
+; il faut copier ce fichier et le renommer en config.ini
+; Evidemment, il faut aussi remplir les valeurs
+
+DB_HOST=localhost
+DB_USERNAME=
+DB_PASSWORD=
+DB_NAME=
